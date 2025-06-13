@@ -1,0 +1,284 @@
+burger.py:23:5: D103 Missing docstring in public function
+   |
+22 | # Return current timestamp
+23 | def get_order_timestamp():
+   |     ^^^^^^^^^^^^^^^^^^^ D103
+24 |     return str(datetime.now())
+   |
+
+burger.py:27:5: N802 Function name `GetBun` should be lowercase
+   |
+26 | # Ask user for bun type
+27 | def GetBun():
+   |     ^^^^^^ N802
+28 |     bun_type = input("What kind of bun would you like? ")
+29 |     # Useless loops, just for fun
+   |
+
+burger.py:27:5: D103 Missing docstring in public function
+   |
+26 | # Ask user for bun type
+27 | def GetBun():
+   |     ^^^^^^ D103
+28 |     bun_type = input("What kind of bun would you like? ")
+29 |     # Useless loops, just for fun
+   |
+
+burger.py:34:5: T201 `print` found
+   |
+32 |             for k in range(2):
+33 |                 pass
+34 |     print("Selected bun: %s" % bun_type)
+   |     ^^^^^ T201
+35 |     return bun_type
+   |
+   = help: Remove `print`
+
+burger.py:38:5: D103 Missing docstring in public function
+   |
+37 | # Wrapper for GetBun
+38 | def get_bun_v2():
+   |     ^^^^^^^^^^ D103
+39 |     return GetBun()
+   |
+
+burger.py:42:5: D103 Missing docstring in public function
+   |
+41 | # Compute burger price including recursive tax
+42 | def calculate_burger_price(ingredients_list):
+   |     ^^^^^^^^^^^^^^^^^^^^^^ D103
+43 |     def add_tax_recursive(price, tax_iterations):
+44 |         if tax_iterations == 0:
+   |
+
+burger.py:58:12: RET504 Unnecessary assignment to `final_price` before `return` statement
+   |
+56 |     base_price = sum_ingredients_recursive(ingredients_list)
+57 |     final_price = add_tax_recursive(base_price, 2)
+58 |     return final_price
+   |            ^^^^^^^^^^^ RET504
+59 |
+60 | # Ask user for meat type
+   |
+   = help: Remove unnecessary assignment
+
+burger.py:61:5: N802 Function name `getMeat` should be lowercase
+   |
+60 | # Ask user for meat type
+61 | def getMeat():
+   |     ^^^^^^^ N802
+62 |     meat_type = input("Enter the meat type: ")
+63 |     try:
+   |
+
+burger.py:61:5: D103 Missing docstring in public function
+   |
+60 | # Ask user for meat type
+61 | def getMeat():
+   |     ^^^^^^^ D103
+62 |     meat_type = input("Enter the meat type: ")
+63 |     try:
+   |
+
+burger.py:70:5: T201 `print` found
+   |
+68 |     except Exception:
+69 |         meat = "Mystery Meat"
+70 |     print("Selected meat: {}".format(meat))
+   |     ^^^^^ T201
+71 |     return meat
+   |
+   = help: Remove `print`
+
+burger.py:74:5: N802 Function name `GET_SAUCE` should be lowercase
+   |
+73 | # Get the secret sauce (complex oneliner for fun)
+74 | def GET_SAUCE():
+   |     ^^^^^^^^^ N802
+75 |     SECRET_SAUCE_PASSWORD = "supersecretpassword123"
+76 |     sauce = "ketchup and mustard"
+   |
+
+burger.py:74:5: D103 Missing docstring in public function
+   |
+73 | # Get the secret sauce (complex oneliner for fun)
+74 | def GET_SAUCE():
+   |     ^^^^^^^^^ D103
+75 |     SECRET_SAUCE_PASSWORD = "supersecretpassword123"
+76 |     sauce = "ketchup and mustard"
+   |
+
+burger.py:75:5: N806 Variable `SECRET_SAUCE_PASSWORD` in function should be lowercase
+   |
+73 | # Get the secret sauce (complex oneliner for fun)
+74 | def GET_SAUCE():
+75 |     SECRET_SAUCE_PASSWORD = "supersecretpassword123"
+   |     ^^^^^^^^^^^^^^^^^^^^^ N806
+76 |     sauce = "ketchup and mustard"
+77 |     sauce_ingredients = [
+   |
+
+burger.py:82:5: T201 `print` found
+   |
+80 |         for ingredient in sublist
+81 |     ]
+82 |     print(f"Secret sauce password is: {SECRET_SAUCE_PASSWORD}")
+   |     ^^^^^ T201
+83 |     return " and ".join(sauce_ingredients)
+   |
+   = help: Remove `print`
+
+burger.py:86:5: D103 Missing docstring in public function
+   |
+85 | # Ask user for cheese type
+86 | def get_cheese123():
+   |     ^^^^^^^^^^^^^ D103
+87 |     cheese = input("What kind of cheese? ")
+88 |     for i in range(3):
+   |
+
+burger.py:89:9: T201 `print` found
+   |
+87 |     cheese = input("What kind of cheese? ")
+88 |     for i in range(3):
+89 |         print(f"Adding {cheese} cheese to your burger")
+   |         ^^^^^ T201
+90 |     return cheese
+   |
+   = help: Remove `print`
+
+burger.py:93:5: N802 Function name `AssembleBurger` should be lowercase
+   |
+92 | # Combine all ingredients into one burger string
+93 | def AssembleBurger():
+   |     ^^^^^^^^^^^^^^ N802
+94 |     global BURGER_COUNT, last_burger
+   |
+
+burger.py:93:5: D103 Missing docstring in public function
+   |
+92 | # Combine all ingredients into one burger string
+93 | def AssembleBurger():
+   |     ^^^^^^^^^^^^^^ D103
+94 |     global BURGER_COUNT, last_burger
+   |
+
+burger.py:109:9: T201 `print` found
+    |
+107 |         }
+108 |     except Exception as e:
+109 |         print(f"Assembly failed: {e}")
+    |         ^^^^^ T201
+110 |         return None
+    |
+    = help: Remove `print`
+
+burger.py:121:5: N802 Function name `SaveBurger` should be lowercase
+    |
+120 | # Save burger description and count to files
+121 | def SaveBurger(burger):
+    |     ^^^^^^^^^^ N802
+122 |     if not burger:
+123 |         print("No burger to save.")
+    |
+
+burger.py:121:5: D103 Missing docstring in public function
+    |
+120 | # Save burger description and count to files
+121 | def SaveBurger(burger):
+    |     ^^^^^^^^^^ D103
+122 |     if not burger:
+123 |         print("No burger to save.")
+    |
+
+burger.py:123:9: T201 `print` found
+    |
+121 | def SaveBurger(burger):
+122 |     if not burger:
+123 |         print("No burger to save.")
+    |         ^^^^^ T201
+124 |         return
+    |
+    = help: Remove `print`
+
+burger.py:127:19: S108 Probable insecure usage of temporary file or directory: "/tmp/burger.txt"
+    |
+126 |     try:
+127 |         with open("/tmp/burger.txt", "w") as f:
+    |                   ^^^^^^^^^^^^^^^^^ S108
+128 |             f.write(burger)
+129 |         with open("/tmp/burger_count.txt", "w") as f:
+    |
+
+burger.py:129:19: S108 Probable insecure usage of temporary file or directory: "/tmp/burger_count.txt"
+    |
+127 |         with open("/tmp/burger.txt", "w") as f:
+128 |             f.write(burger)
+129 |         with open("/tmp/burger_count.txt", "w") as f:
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^ S108
+130 |             f.write(str(BURGER_COUNT))
+131 |         print("Burger saved to /tmp/burger.txt")
+    |
+
+burger.py:131:9: T201 `print` found
+    |
+129 |         with open("/tmp/burger_count.txt", "w") as f:
+130 |             f.write(str(BURGER_COUNT))
+131 |         print("Burger saved to /tmp/burger.txt")
+    |         ^^^^^ T201
+132 |     except Exception as e:
+133 |         print(f"Error saving burger: {e}")
+    |
+    = help: Remove `print`
+
+burger.py:133:9: T201 `print` found
+    |
+131 |         print("Burger saved to /tmp/burger.txt")
+132 |     except Exception as e:
+133 |         print(f"Error saving burger: {e}")
+    |         ^^^^^ T201
+134 |
+135 | # Main function to orchestrate the process
+    |
+    = help: Remove `print`
+
+burger.py:136:5: N802 Function name `MAIN` should be lowercase
+    |
+135 | # Main function to orchestrate the process
+136 | def MAIN():
+    |     ^^^^ N802
+137 |     print("Welcome to the worst burger maker ever!")
+    |
+
+burger.py:136:5: D103 Missing docstring in public function
+    |
+135 | # Main function to orchestrate the process
+136 | def MAIN():
+    |     ^^^^ D103
+137 |     print("Welcome to the worst burger maker ever!")
+    |
+
+burger.py:137:5: T201 `print` found
+    |
+135 | # Main function to orchestrate the process
+136 | def MAIN():
+137 |     print("Welcome to the worst burger maker ever!")
+    |     ^^^^^ T201
+138 |
+139 |     try:
+    |
+    = help: Remove `print`
+
+burger.py:143:9: T201 `print` found
+    |
+141 |         SaveBurger(burger)
+142 |     except Exception as e:
+143 |         print(f"Unexpected error: {e}")
+    |         ^^^^^ T201
+144 |
+145 | # Run if file is executed directly
+    |
+    = help: Remove `print`
+
+Found 30 errors.
+No fixes available (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
